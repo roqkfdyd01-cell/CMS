@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>채팅 화면 - 사용자</title>
+    <link rel="stylesheet" href="./files/styles.css">
+</head>
+<body>
+    <div class="chat-container" id="chatContainer" style="display: flex;">
+        <div class="chat-header">
+            채팅
+            <div class="header-controls">
+                <button id="ttsToggleBtn" title="음성 읽기 ON/OFF">🔊</button>
+                <button class="refresh-button">🔄</button>
+            </div>
+        </div>
+        <div class="chat-messages">
+            <div class="message bot">안녕하세요! 무엇을 도와드릴까요?</div>
+        </div>
+        <div class="chat-input">
+            <input id="chatInput" type="text" placeholder="메시지를 입력하세요...">
+            <button id="voiceBtn" class="voice-button" title="음성 인식 시작">🎤</button>
+            <button id="sendBtn">전송</button>
+        </div>
+
+        <div id="confirmModal" class="modal">
+            <div class="modal-content">
+                <p>대화 내용을 초기화하시겠습니까?</p>
+                <div class="modal-buttons">
+                    <button id="confirmYes">예</button>
+                    <button id="confirmNo">아니오</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./files/jquery-3.7.1.min.js"></script>
+    <script src="./files/script2.js"></script>
+    <script>
+        // 초기 컨테이너 표시 설정
+        document.getElementById('chatContainer').style.display = 'flex';
+    </script>
+</body>
+</html>

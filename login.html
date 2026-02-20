@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>로그인 화면</title>
+<link rel="stylesheet" href="./files/styles.css">
+</head>
+<body>
+    <div class="login-container" id="loginContainer">
+        <h2>로그인</h2>
+        <input type="text" id="username" placeholder="사용자 이름">
+        <input type="password" id="password" placeholder="비밀번호">
+        <button id="loginBtn">로그인</button>
+    </div>
+
+    <div class="chat-container" id="chatContainer" style="display: none;">
+        <div class="chat-header">
+            채팅
+            <button class="refresh-button" alt="채팅 초기화">🔄</button>
+        </div>
+        <div class="chat-messages">
+            <div class="message bot">로그인되었습니다. 대화를 시작하세요.</div>
+        </div>
+        <div class="chat-input">
+            <input id="chatInput" type="text" placeholder="메시지를 입력하세요...">
+            <button id="voiceBtn" class="voice-button" title="음성 인식 시작">🎤</button>
+            <button id="sendBtn">전송</button>
+        </div>
+
+        <div id="confirmModal" class="modal">
+            <div class="modal-content">
+                <p>대화 내용을 초기화하시겠습니까?</p>
+                <div class="modal-buttons">
+                    <button id="confirmYes">예</button>
+                    <button id="confirmNo">아니오</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script src="./files/jquery-3.7.1.min.js"></script>
+<script src="./files/script2.js"></script>
+</body></html>
